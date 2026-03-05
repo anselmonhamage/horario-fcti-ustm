@@ -76,7 +76,7 @@ export const SCHEDULES = [
     ]
   },
   {
-    turma: "2L3LDS2 - N existe", curso: "LDS", ano: 2, semestre: 3, periodo: "Laboral", turno: "Manhã", sala: "8",
+    turma: "2L3LDS2 - Recém-criada", curso: "LDS", ano: 2, semestre: 3, periodo: "Laboral", turno: "Manhã", sala: "8",
     disciplinas: { AMII: "Nelson Nhiuana", MD: "Helder Machava", PII: "Agnaldo Massango", EST: "Salmina Mendes", IRC: "Paulino Muebe" },
     aulas: [
       { dia: "Segunda", inicio: "8:15", fim: "10:35", disciplina: "PII", docente: "Agnaldo Massango" },
@@ -371,7 +371,7 @@ export const SCHEDULES = [
     ]
   },
   {
-    turma: "2L3LASIR2T - N existe", curso: "LASIR", ano: 2, semestre: 3, periodo: "Laboral", turno: "Tarde", sala: "14",
+    turma: "2L3LASIR2T - Não existe", curso: "LASIR", ano: 2, semestre: 3, periodo: "Laboral", turno: "Tarde", sala: "14",
     disciplinas: { AMII: "", MD: "", PII: "Fernando Langa", EST: "Anselmo Cossa", IRC: "Crimildo Garrine" },
     aulas: [
       { dia: "Terça", inicio: "12:30", fim: "14:00", disciplina: "EST", docente: "Anselmo Cossa" },

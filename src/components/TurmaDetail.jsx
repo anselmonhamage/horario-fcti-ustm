@@ -36,12 +36,12 @@ export default function TurmaDetail({ selected, roomConflicts, teacherConflicts,
                     </div>
                     {roomConflicts.map((c, i) => (
                         <div key={`r${i}`} style={{ fontSize: 12, color: "var(--sub)", marginBottom: 4, display: "flex", alignItems: "center", gap: 5 }}>
-                            <Building2 size={12} /> <b>Sala {c.sala}</b> — {c.dia}: {c.turmaA.replace(/ - N existe/, "")} ({c.discA}, {c.horaA}) ↔ {c.turmaB.replace(/ - N existe/, "")} ({c.discB}, {c.horaB})
+                            <Building2 size={12} /> <b>Sala {c.sala}</b> — {c.dia}: {c.turmaA.replace(/ - (Não existe|Recém-criada)/, "")} ({c.discA}, {c.horaA}) ↔ {c.turmaB.replace(/ - (Não existe|Recém-criada)/, "")} ({c.discB}, {c.horaB})
                         </div>
                     ))}
                     {teacherConflicts.map((c, i) => (
                         <div key={`t${i}`} style={{ fontSize: 12, color: "var(--sub)", marginBottom: 4, display: "flex", alignItems: "center", gap: 5 }}>
-                            <User size={12} /> <b>{c.docente}</b> — {c.dia}: {c.turmaA.replace(/ - N existe/, "")} ({c.discA}) ↔ {c.turmaB.replace(/ - N existe/, "")} ({c.discB})
+                            <User size={12} /> <b>{c.docente}</b> — {c.dia}: {c.turmaA.replace(/ - (Não existe|Recém-criada)/, "")} ({c.discA}) ↔ {c.turmaB.replace(/ - (Não existe|Recém-criada)/, "")} ({c.discB})
                         </div>
                     ))}
                 </div>

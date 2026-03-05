@@ -26,7 +26,7 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
                                 <div className="conflict-card-body">
                                     {[{ t: c.turmaA, d: c.discA, h: c.horaA, doc: c.docenteA }, { t: c.turmaB, d: c.discB, h: c.horaB, doc: c.docenteB }].map((item, idx) => (
                                         <div key={idx} className="conflict-item" onClick={() => onSelectTurma(item.t)}>
-                                            <div style={{ fontWeight: 600, color: "var(--accent)", fontSize: 13, marginBottom: 3 }}>{item.t.replace(/ - N existe/, "")}</div>
+                                            <div style={{ fontWeight: 600, color: "var(--accent)", fontSize: 13, marginBottom: 3 }}>{item.t.replace(/ - (Não existe|Recém-criada)/, "")}</div>
                                             <div style={{ color: discColor(item.d), fontWeight: 500, fontSize: 12 }}>{item.d}</div>
                                             <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 3, display: "flex", alignItems: "center", gap: 4 }}><Clock size={11} /> {item.h}</div>
                                             {item.doc && <div style={{ color: "var(--sub)", fontSize: 11, marginTop: 3, display: "flex", alignItems: "center", gap: 4 }}><User size={11} /> {item.doc}</div>}
@@ -52,7 +52,7 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
                                 <div className="conflict-card-body">
                                     {[{ t: c.turmaA, disc: c.discA, h: c.horaA }, { t: c.turmaB, disc: c.discB, h: c.horaB }].map((item, idx) => (
                                         <div key={idx} className="conflict-item" onClick={() => onSelectTurma(item.t)}>
-                                            <div style={{ fontWeight: 600, color: "var(--amber)", fontSize: 13, marginBottom: 3 }}>{item.t.replace(/ - N existe/, "")}</div>
+                                            <div style={{ fontWeight: 600, color: "var(--amber)", fontSize: 13, marginBottom: 3 }}>{item.t.replace(/ - (Não existe|Recém-criada)/, "")}</div>
                                             <div style={{ color: discColor(item.disc), fontWeight: 500, fontSize: 12 }}>{item.disc}</div>
                                             <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 3, display: "flex", alignItems: "center", gap: 4 }}><Clock size={11} /> {item.h}</div>
                                         </div>
