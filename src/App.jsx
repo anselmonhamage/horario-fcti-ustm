@@ -89,12 +89,14 @@ export default function App() {
               </div>
 
               {selected && (
-                <TurmaDetail
-                  selected={selected}
-                  roomConflicts={myRoomConflicts}
-                  teacherConflicts={myTeacherConflicts}
-                  onClose={() => setSelectedTurma(null)}
-                />
+                <div className="detail-overlay" onClick={(e) => { if (e.target === e.currentTarget) setSelectedTurma(null); }}>
+                  <TurmaDetail
+                    selected={selected}
+                    roomConflicts={myRoomConflicts}
+                    teacherConflicts={myTeacherConflicts}
+                    onClose={() => setSelectedTurma(null)}
+                  />
+                </div>
               )}
             </div>
 
