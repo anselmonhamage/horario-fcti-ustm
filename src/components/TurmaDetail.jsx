@@ -80,14 +80,35 @@ export default function TurmaDetail({ selected, roomConflicts, teacherConflicts,
                             <div className="day-header">{DIA_SHORT[dia] || dia.slice(0, 3)}</div>
                             {aulas.length === 0
                                 ? <div style={{ color: "var(--dash-color)", fontSize: 12, textAlign: "center", padding: "8px 0" }}>—</div>
-                                : aulas.map((a, i) => (
-                                    <div key={i} className="class-block" style={{ background: `${discColor(a.disciplina)}12`, borderColor: `${discColor(a.disciplina)}30`, borderLeftColor: discColor(a.disciplina) }}>
-                                        <div style={{ fontWeight: 600, color: discColor(a.disciplina), fontSize: 12, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{a.disciplina}</div>
-                                        <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2, display: "flex", alignItems: "center", gap: 3 }}><Clock size={10} /> {a.inicio}–{a.fim}</div>
-                                        {a.docente && <div style={{ fontSize: 10, color: "var(--sub)", marginTop: 3, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{a.docente.split(" ")[0]}</div>}
-                                        {a.lab && <div style={{ marginTop: 4, display: "inline-flex", alignItems: "center", gap: 3, background: "var(--lab-bg)", color: "var(--lab-tx)", padding: "2px 6px", borderRadius: 4, fontSize: 10 }}><FlaskConical size={10} /> {a.lab}</div>}
-                                    </div>
-                                ))
+                                : aulas.map((a, i) => {
+                                    const isRoomConf = roomConflicts.some(c => c.dia === a.dia && ((c.turmaA === selected.turma && c.discA === a.disciplina) || (c.turmaB === selected.turma && c.discB === a.disciplina)));
+                                    const isTeacherConf = teacherConflicts.some(c => c.dia === a.dia && ((c.turmaA === selected.turma && c.discA === a.disciplina) || (c.turmaB === selected.turma && c.discB === a.disciplina)));
+
+                                    let borderColor = `${discColor(a.disciplina)}30`;
+                                    let leftColor = discColor(a.disciplina);
+                                    let bgColor = `${discColor(a.disciplina)}12`;
+                                    let textColor = discColor(a.disciplina);
+
+                                    if (isRoomConf && isTeacherConf) {
+                                        borderColor = "var(--conflict-both)"; leftColor = "var(--conflict-both)"; bgColor = "#dc262615"; textColor = "var(--conflict-both)";
+                                    } else if (isRoomConf) {
+                                        borderColor = "var(--warn-border)"; leftColor = "var(--conflict-room)"; bgColor = "var(--warn-bg)"; textColor = "var(--conflict-room)";
+                                    } else if (isTeacherConf) {
+                                        borderColor = "var(--amber-border)"; leftColor = "var(--conflict-teacher)"; bgColor = "var(--amber-bg)"; textColor = "var(--conflict-teacher)";
+                                    }
+
+                                    return (
+                                        <div key={i} className={`class-block${(isRoomConf || isTeacherConf) ? " conflict-pulse" : ""}`} style={{ background: bgColor, borderColor: borderColor, borderLeftColor: leftColor }}>
+                                            <div style={{ fontWeight: 600, color: textColor, fontSize: 12, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", display: "flex", gap: 4, alignItems: "center" }}>
+                                                {(isRoomConf || isTeacherConf) && <AlertTriangle size={12} />}
+                                                {a.disciplina}
+                                            </div>
+                                            <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 2, display: "flex", alignItems: "center", gap: 3 }}><Clock size={10} /> {a.inicio}–{a.fim}</div>
+                                            {a.docente && <div style={{ fontSize: 10, color: isTeacherConf ? "var(--conflict-teacher)" : "var(--sub)", marginTop: 3, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", display: "flex", gap: 3, alignItems: "center" }}><User size={10} /> {a.docente.split(" ")[0]}</div>}
+                                            {a.lab && <div style={{ marginTop: 4, display: "inline-flex", alignItems: "center", gap: 3, background: isRoomConf ? "var(--conflict-room)" : "var(--lab-bg)", color: isRoomConf ? "#fff" : "var(--lab-tx)", padding: "2px 6px", borderRadius: 4, fontSize: 10 }}><FlaskConical size={10} /> {a.lab}</div>}
+                                        </div>
+                                    );
+                                })
                             }
                         </div>
                     );

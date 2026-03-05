@@ -193,9 +193,9 @@ export const SCHEDULES = [
     aulas: [
       { dia: "Segunda", inicio: "7:30", fim: "9:00", disciplina: "POOA", docente: "Fernando Langa", lab: "Sala 10" },
       { dia: "Segunda", inicio: "9:05", fim: "11:25", disciplina: "APM", docente: "Leonardo Manjate" },
-      { dia: "Terça", inicio: "7:30", fim: "9:00", disciplina: "RAP", docente: "Joseph Katame" },
-      { dia: "Terça", inicio: "9:05", fim: "10:35", disciplina: "PFI", docente: "Rodolfo Malagissa" },
-      { dia: "Terça", inicio: "10:40", fim: "12:10", disciplina: "ESA", docente: "Elisio Macia" },
+      { dia: "Terça", inicio: "7:30", fim: "9:00", disciplina: "RAP", docente: "Joseph Katame", lab: "Sala 5" },
+      { dia: "Terça", inicio: "9:05", fim: "10:35", disciplina: "PFI", docente: "Rodolfo Malagissa", lab: "Sala 5" },
+      { dia: "Terça", inicio: "10:40", fim: "12:10", disciplina: "ESA", docente: "Elisio Macia", lab: "Sala 5" },
       { dia: "Quarta", inicio: "7:30", fim: "9:50", disciplina: "APM", docente: "Leonardo Manjate", lab: "Lab1" },
       { dia: "Quinta", inicio: "10:40", fim: "12:10", disciplina: "RAP", docente: "Joseph Katame", lab: "Lab1" },
       { dia: "Quinta", inicio: "12:30", fim: "14:00", disciplina: "ESA", docente: "Elisio Macia", lab: "Lab1" },
@@ -206,29 +206,29 @@ export const SCHEDULES = [
     turma: "4L7LDS2", curso: "LDS", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
     disciplinas: { ESA: "Elisio Macia", RAP: "Joseph Katame", APM: "Leonardo Manjate", POOA: "Fernando Langa", PFI: "Lucia Ginger" },
     aulas: [
-      { dia: "Segunda", inicio: "8:15", fim: "10:35", disciplina: "APM", docente: "Leonardo Manjate" },
+      { dia: "Segunda", inicio: "8:15", fim: "10:35", disciplina: "APM", docente: "Leonardo Manjate", lab: "Sala 6" },
       { dia: "Segunda", inicio: "10:40", fim: "12:10", disciplina: "POOA", docente: "Fernando Langa", lab: "Lab1" },
       { dia: "Terça", inicio: "7:30", fim: "9:00", disciplina: "RAP", docente: "Joseph Katame", lab: "Lab1" },
-      { dia: "Terça", inicio: "9:05", fim: "10:35", disciplina: "PFI", docente: "Lucia Ginger" },
-      { dia: "Terça", inicio: "10:40", fim: "12:10", disciplina: "ESA", docente: "Elisio Macia" },
+      { dia: "Terça", inicio: "9:05", fim: "10:35", disciplina: "PFI", docente: "Lucia Ginger", lab: "Sala 10" },
+      { dia: "Terça", inicio: "10:40", fim: "12:10", disciplina: "ESA", docente: "Elisio Macia", lab: "Sala 10" },
       { dia: "Quarta", inicio: "9:50", fim: "12:10", disciplina: "APM", docente: "Leonardo Manjate", lab: "Lab1" },
       { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "ESA", docente: "Elisio Macia", lab: "Lab1" },
-      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "RAP", docente: "Joseph Katame" },
-      { dia: "Quinta", inicio: "10:40", fim: "12:10", disciplina: "POOA", docente: "Fernando Langa" }
+      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "RAP", docente: "Joseph Katame", lab: "Sala 11" },
+      { dia: "Quinta", inicio: "10:40", fim: "12:10", disciplina: "POOA", docente: "Fernando Langa", lab: "Sala 11" }
     ]
   },
   {
-    turma: "4P7LDS1", curso: "LDS", ano: 4, semestre: 7, periodo: "Pós-Laboral", turno: "Noite", sala: "8",
+    turma: "4P7LDS1", curso: "LDS", ano: 4, semestre: 7, periodo: "Pós-Laboral", turno: "Noite", sala: "08",
     disciplinas: { ESA: "Duarte Bila", RAP: "Moisés Ribeiro", APM: "Alírio Rungo", POOA: "Fernando Nhanice", PFI: "M Momade" },
     aulas: [
       { dia: "Segunda", inicio: "17:30", fim: "19:00", disciplina: "ESA", docente: "Duarte Bila", lab: "Lab1" },
       { dia: "Segunda", inicio: "19:05", fim: "21:25", disciplina: "APM", docente: "Alírio Rungo", lab: "Lab1" },
       { dia: "Terça", inicio: "17:30", fim: "19:00", disciplina: "POOA", docente: "Fernando Nhanice", lab: "Lab1" },
-      { dia: "Terça", inicio: "19:05", fim: "20:35", disciplina: "RAP", docente: "Moisés Ribeiro" },
-      { dia: "Quarta", inicio: "17:30", fim: "19:50", disciplina: "APM", docente: "Alírio Rungo" },
-      { dia: "Quinta", inicio: "17:30", fim: "19:00", disciplina: "ESA", docente: "Duarte Bila" },
-      { dia: "Quinta", inicio: "19:05", fim: "20:35", disciplina: "POOA", docente: "Fernando Nhanice" },
-      { dia: "Sexta", inicio: "17:30", fim: "19:00", disciplina: "PFI", docente: "M Momade" },
+      { dia: "Terça", inicio: "19:05", fim: "20:35", disciplina: "RAP", docente: "Moisés Ribeiro", lab: "Sala 4" },
+      { dia: "Quarta", inicio: "17:30", fim: "19:50", disciplina: "APM", docente: "Alírio Rungo", lab: "Sala 4" },
+      { dia: "Quinta", inicio: "17:30", fim: "19:00", disciplina: "ESA", docente: "Duarte Bila", lab: "Sala 8" },
+      { dia: "Quinta", inicio: "19:05", fim: "20:35", disciplina: "POOA", docente: "Fernando Nhanice", lab: "Sala 8" },
+      { dia: "Sexta", inicio: "17:30", fim: "19:00", disciplina: "PFI", docente: "M Momade", lab: "Sala 8" },
       { dia: "Sexta", inicio: "19:50", fim: "21:25", disciplina: "RAP", docente: "Moisés Ribeiro", lab: "Lab1" }
     ]
   },
@@ -251,8 +251,8 @@ export const SCHEDULES = [
     turma: "1L1LASIR2", curso: "LASIR", ano: 1, semestre: 1, periodo: "Laboral", turno: "Manhã", sala: "13",
     disciplinas: { IL: "Kriss Zimba", LP: "Ivan Mandane", SDG: "Benilde Nhanala", IT: "José Manjate", ALGA: "Ilencia Martins" },
     aulas: [
-      { dia: "Segunda", inicio: "10:40", fim: "12:10", disciplina: "IT", docente: "José Manjate" },
-      { dia: "Terça", inicio: "7:30", fim: "9:50", disciplina: "IL", docente: "Kriss Zimba" },
+      { dia: "Segunda", inicio: "10:40", fim: "12:10", disciplina: "ALGA", docente: "Ilencia Martins" },
+      { dia: "Terça", inicio: "7:30", fim: "9:50", disciplina: "IT", docente: "José Manjate" },
       { dia: "Terça", inicio: "9:50", fim: "12:10", disciplina: "LP", docente: "Ivan Mandane" },
       { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "IL", docente: "Kriss Zimba" },
       { dia: "Quarta", inicio: "10:40", fim: "12:10", disciplina: "SDG", docente: "Benilde Nhanala" },
@@ -444,7 +444,7 @@ export const SCHEDULES = [
       { dia: "Terça", inicio: "14:05", fim: "15:35", disciplina: "GAE", docente: "Angélica Cossa" },
       { dia: "Terça", inicio: "15:40", fim: "17:10", disciplina: "SSC", docente: "Lázaro Compeu" },
       { dia: "Quarta", inicio: "12:30", fim: "14:00", disciplina: "SD", docente: "Horácio Nhantumbo" },
-      { dia: "Quarta", inicio: "14:05", fim: "15:35", disciplina: "SGBD", docente: "Anselmo Wanse", lab: "Lab2" },
+      { dia: "Quarta", inicio: "14:05", fim: "15:35", disciplina: "SGBD", docente: "Anselmo Wanse" },
       { dia: "Quinta", inicio: "14:05", fim: "15:35", disciplina: "GAE", docente: "Angélica Cossa" },
       { dia: "Quinta", inicio: "15:40", fim: "17:10", disciplina: "LR", docente: "Tomé Jamal", lab: "Lab2" },
       { dia: "Sexta", inicio: "14:50", fim: "17:10", disciplina: "SSC", docente: "Lázaro Compeu", lab: "Lab1" }
@@ -568,7 +568,7 @@ export const SCHEDULES = [
       { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "Moutinho Ciporo", lab: "Sala 11" },
       { dia: "Quarta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Simião Chave", lab: "Lab2" },
       { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Helder Nhampule", lab: "Sala 8" },
-      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "", lab: "Sala 9" },
+      { dia: "Quinta", inicio: "9:50", fim: "11:25", disciplina: "TFRC", docente: "", lab: "Sala 9" },
       { dia: "Sexta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Helder Nhampule", lab: "Sala 11" },
       { dia: "Sexta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "Moutinho Ciporo", lab: "Sala 11" },
       { dia: "Sexta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Simião Chave", lab: "Sala 11" }
