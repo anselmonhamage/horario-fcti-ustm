@@ -530,6 +530,51 @@ export const SCHEDULES = [
     ]
   },
   {
+    turma: "4L7LASIR2", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
+    disciplinas: { TFRC: "Omar Muando", SRC: "Mauro Salimo", GSI: "Esmeralda Calengue", PDR: "João Mapisse", PFI: "Rodolfo Malagissa" },
+    aulas: [
+      { dia: "Segunda", inicio: "7:30", fim: "9:00", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 11" },
+      { dia: "Segunda", inicio: "9:05", fim: "10:35", disciplina: "PFI", docente: "Rodolfo Malagissa", lab: "Sala 13" },
+      { dia: "Segunda", inicio: "10:40", fim: "12:10", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 16" },
+      { dia: "Terça", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "Omar Muando", lab: "Lab1" },
+      { dia: "Terça", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Mauro Salimo", lab: "Lab1" },
+      { dia: "Quarta", inicio: "7:30", fim: "9:00", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 14" },
+      { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 14" },
+      { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "TFRC", docente: "Omar Muando", lab: "Sala 12" },
+      { dia: "Quinta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Mauro Salimo", lab: "Sala 16" }
+    ]
+  },
+  {
+    turma: "4L7LASIR3", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
+    disciplinas: { TFRC: "Omar Muando", SRC: "Mauro Salimo", GSI: "Esmeralda Calengue", PDR: "João Mapisse", PFI: "Miguel Momade" },
+    aulas: [
+      { dia: "Segunda", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "Omar Muando", lab: "Lab2" },
+      { dia: "Quarta", inicio: "7:30", fim: "9:00", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 09" },
+      { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "SRC", docente: "Mauro Salimo", lab: "Sala 09" },
+      { dia: "Quarta", inicio: "10:40", fim: "12:10", disciplina: "PFI", docente: "Miguel Momade", lab: "Sala 09" },
+      { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "TFRC", docente: "Omar Muando", lab: "Sala 5" },
+      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 6" },
+      { dia: "Sexta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 6" },
+      { dia: "Sexta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 6" },
+      { dia: "Sexta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Mauro Salimo", lab: "Lab2" }
+    ]
+  },
+  {
+    turma: "4L7LASIR4", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
+    disciplinas: { TFRC: "", SRC: "Simião Chave", GSI: "Helder Nhampule", PDR: "Moutinho Ciporo", PFI: "Miguel Momade" },
+    aulas: [
+      { dia: "Segunda", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "", lab: "Lab1" },
+      { dia: "Quarta", inicio: "7:30", fim: "9:00", disciplina: "PFI", docente: "Miguel Momade", lab: "Sala 11" },
+      { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "Moutinho Ciporo", lab: "Sala 11" },
+      { dia: "Quarta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Simião Chave", lab: "Lab2" },
+      { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Helder Nhampule", lab: "Sala 8" },
+      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "", lab: "Sala 9" },
+      { dia: "Sexta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Helder Nhampule", lab: "Sala 11" },
+      { dia: "Sexta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "Moutinho Ciporo", lab: "Sala 11" },
+      { dia: "Sexta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Simião Chave", lab: "Sala 11" }
+    ]
+  },
+  {
     turma: "4L7LASIR1T", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Tarde", sala: "7",
     disciplinas: { TFRC: "Omar Muando", SRC: "Simião Chave", GSI: "M Momade", PDR: "Moutinho Ciporo", PFI: "Lúcia Ginger" },
     aulas: [
@@ -587,51 +632,6 @@ export const SCHEDULES = [
       { dia: "Quinta", inicio: "17:30", fim: "19:00", disciplina: "GSI", docente: "M Momade" },
       { dia: "Quinta", inicio: "19:05", fim: "20:35", disciplina: "PDR", docente: "Felizardo Munguambe" },
       { dia: "Sexta", inicio: "17:30", fim: "19:00", disciplina: "SRC", docente: "Crimildo Garrine", lab: "Lab2" }
-    ]
-  },
-  {
-    turma: "4L7LASIR2", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
-    disciplinas: { TFRC: "Omar Muando", SRC: "Mauro Salimo", GSI: "Esmeralda Calengue", PDR: "João Mapisse", PFI: "Rodolfo Malagissa" },
-    aulas: [
-      { dia: "Segunda", inicio: "7:30", fim: "9:00", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 11" },
-      { dia: "Segunda", inicio: "9:05", fim: "10:35", disciplina: "PFI", docente: "Rodolfo Malagissa", lab: "Sala 13" },
-      { dia: "Segunda", inicio: "10:40", fim: "12:10", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 16" },
-      { dia: "Terça", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "Omar Muando", lab: "Lab1" },
-      { dia: "Terça", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Mauro Salimo", lab: "Lab1" },
-      { dia: "Quarta", inicio: "7:30", fim: "9:00", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 14" },
-      { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 14" },
-      { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "TFRC", docente: "Omar Muando", lab: "Sala 12" },
-      { dia: "Quinta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Mauro Salimo", lab: "Sala 16" }
-    ]
-  },
-  {
-    turma: "4L7LASIR3", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
-    disciplinas: { TFRC: "Omar Muando", SRC: "Mauro Salimo", GSI: "Esmeralda Calengue", PDR: "João Mapisse", PFI: "Miguel Momade" },
-    aulas: [
-      { dia: "Segunda", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "Omar Muando", lab: "Lab2" },
-      { dia: "Quarta", inicio: "7:30", fim: "9:00", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 09" },
-      { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "SRC", docente: "Mauro Salimo", lab: "Sala 09" },
-      { dia: "Quarta", inicio: "10:40", fim: "12:10", disciplina: "PFI", docente: "Miguel Momade", lab: "Sala 09" },
-      { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "TFRC", docente: "Omar Muando", lab: "Sala 5" },
-      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 6" },
-      { dia: "Sexta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Esmeralda Calengue", lab: "Sala 6" },
-      { dia: "Sexta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "João Mapisse", lab: "Sala 6" },
-      { dia: "Sexta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Mauro Salimo", lab: "Lab2" }
-    ]
-  },
-  {
-    turma: "4L7LASIR4", curso: "LASIR", ano: 4, semestre: 7, periodo: "Laboral", turno: "Manhã", sala: "ver abaixo",
-    disciplinas: { TFRC: "", SRC: "Simião Chave", GSI: "Helder Nhampule", PDR: "Moutinho Ciporo", PFI: "Miguel Momade" },
-    aulas: [
-      { dia: "Segunda", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "", lab: "Lab1" },
-      { dia: "Quarta", inicio: "7:30", fim: "9:00", disciplina: "PFI", docente: "Miguel Momade", lab: "Sala 11" },
-      { dia: "Quarta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "Moutinho Ciporo", lab: "Sala 11" },
-      { dia: "Quarta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Simião Chave", lab: "Lab2" },
-      { dia: "Quinta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Helder Nhampule", lab: "Sala 8" },
-      { dia: "Quinta", inicio: "9:05", fim: "10:35", disciplina: "TFRC", docente: "", lab: "Sala 9" },
-      { dia: "Sexta", inicio: "7:30", fim: "9:00", disciplina: "GSI", docente: "Helder Nhampule", lab: "Sala 11" },
-      { dia: "Sexta", inicio: "9:05", fim: "10:35", disciplina: "PDR", docente: "Moutinho Ciporo", lab: "Sala 11" },
-      { dia: "Sexta", inicio: "10:40", fim: "12:10", disciplina: "SRC", docente: "Simião Chave", lab: "Sala 11" }
     ]
   }
 ];

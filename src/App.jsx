@@ -14,7 +14,7 @@ import { Sun, Sunset, Moon, AlertTriangle, FlaskConical, ChevronDown } from "luc
 const turnoIcons = { Manhã: Sun, Tarde: Sunset, Noite: Moon };
 
 export default function App() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [view, setView] = useState("turmas");
   const [filterCurso, setFilterCurso] = useState("Todos");
   const [filterAno, setFilterAno] = useState("Todos");
@@ -59,7 +59,7 @@ export default function App() {
       <Navigation view={view} totalConflicts={totalConflicts} onViewChange={handleViewChange} />
 
       <main className="main-content">
-        {/* ═══ VIEW: TURMAS ═══ */}
+        {/* VIEW: TURMAS */}
         {view === "turmas" && (
           <>
             <div className={`turmas-layout${selected ? "" : " no-detail"}`}>
@@ -98,7 +98,7 @@ export default function App() {
               )}
             </div>
 
-            {/* ─── Resumo Geral (collapsible) ─── */}
+            {/* Resumo Geral (collapsible) */}
             <div style={{ marginTop: 20 }}>
               <div className="resumo-header">
                 <div className="section-label" style={{ marginBottom: 0 }}>Resumo Geral</div>

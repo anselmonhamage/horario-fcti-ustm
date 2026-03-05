@@ -23,7 +23,7 @@ export default function SalasView({ hasConflict, onSelectTurma }) {
                 {sorted.map(([sala, turmas]) => {
                     const anyConflict = turmas.some(t => hasConflict(t.turma));
                     return (
-                        <div key={sala} className="sala-card" style={{ border: `1px solid ${anyConflict ? "var(--warn-border)" : "var(--border)"}` }}>
+                        <div key={sala} className="sala-card" style={anyConflict ? { borderColor: "var(--warn-border)" } : {}}>
                             <div style={{ padding: "12px 16px", borderBottom: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <span style={{ fontSize: 16, fontWeight: 700, color: "var(--text)" }}>Sala {sala}</span>
                                 <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
@@ -34,21 +34,24 @@ export default function SalasView({ hasConflict, onSelectTurma }) {
                             <div style={{ overflowX: "auto" }}>
                                 <table className="data-table">
                                     <tbody>
-                                        {turmas.map(t => {
+                                        {turmas.map((t, idx) => {
                                             const hc = hasConflict(t.turma);
                                             const TurnoIcon = turnoIcons[t.turno];
                                             const turnoClass = t.turno === "Manhã" ? "morning" : t.turno === "Tarde" ? "afternoon" : "night";
+                                            const isLast = idx === turmas.length - 1;
                                             return (
                                                 <tr key={t.turma} style={{ cursor: "pointer" }} onClick={() => onSelectTurma(t.turma)}>
-                                                    <td style={{ fontWeight: 500, color: "var(--text)", display: "flex", alignItems: "center", gap: 6 }}>
-                                                        {t.turma} {hc && <AlertTriangle size={12} style={{ color: "var(--warn)" }} />}
+                                                    <td style={{ fontWeight: 500, color: "var(--text)", borderBottom: isLast ? "none" : undefined }}>
+                                                        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                                                            {t.turma} {hc && <AlertTriangle size={12} style={{ color: "var(--warn)" }} />}
+                                                        </div>
                                                     </td>
-                                                    <td>
+                                                    <td style={{ borderBottom: isLast ? "none" : undefined }}>
                                                         <span className="badge" style={{ background: `var(--${turnoClass}-bg)`, color: `var(--${turnoClass}-tx)` }}>
                                                             <TurnoIcon size={11} /> {t.turno}
                                                         </span>
                                                     </td>
-                                                    <td style={{ color: "var(--muted)", textAlign: "right" }}>{t.aulas.length} aulas</td>
+                                                    <td style={{ color: "var(--muted)", textAlign: "right", borderBottom: isLast ? "none" : undefined }}>{t.aulas.length} aulas</td>
                                                 </tr>
                                             );
                                         })}
