@@ -661,7 +661,6 @@ input::placeholder {
   display: none !important;
 }
 
-/* --- Conflicts View Enhanced --- */
 :root {
   --conflict-room: #ef4444;
   --conflict-teacher: #f59e0b;
@@ -1333,9 +1332,6 @@ input::placeholder {
   }
 }
 
-/* ---- Docentes Responsive ---- */
-
-/* Mobile-first: show cards, hide table */
 .docentes-cards {
   display: flex;
   flex-direction: column;
@@ -1404,7 +1400,6 @@ input::placeholder {
   border-top: 1px solid var(--border);
 }
 
-/* Tablet+: switch to table */
 @media (min-width: 640px) {
   .docentes-cards {
     display: none;

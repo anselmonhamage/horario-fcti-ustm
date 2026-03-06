@@ -59,7 +59,6 @@ export default function App() {
       <Navigation view={view} totalConflicts={totalConflicts} onViewChange={handleViewChange} />
 
       <main className="main-content">
-        {/* VIEW: TURMAS */}
         {view === "turmas" && (
           <>
             <div className={`turmas-layout${selected ? "" : " no-detail"}`}>
@@ -100,7 +99,6 @@ export default function App() {
               )}
             </div>
 
-            {/* Resumo Geral (collapsible) */}
             <div style={{ marginTop: 20 }}>
               <div className="resumo-header">
                 <div className="section-label" style={{ marginBottom: 0 }}>Resumo Geral</div>

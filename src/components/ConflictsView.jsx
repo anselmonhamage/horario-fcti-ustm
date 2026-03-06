@@ -252,10 +252,8 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
 
     return (
         <div className="conflicts-view">
-            {/* Stats Overview */}
             <ConflictStats roomConflicts={roomConflicts} teacherConflicts={teacherConflicts} />
 
-            {/* Legend */}
             <div style={{ marginBottom: 16 }}>
                 <button
                     className="legend-toggle"
@@ -268,7 +266,6 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
                 {showLegend && <ConflictLegend />}
             </div>
 
-            {/* Day filter */}
             <div className="conflict-day-filter">
                 <Filter size={13} style={{ color: "var(--muted)" }} />
                 {dias.map(d => (
@@ -282,7 +279,6 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
                 ))}
             </div>
 
-            {/* Tabs */}
             <div className="conflict-tabs">
                 <button className={`conflict-tab-btn${conflictTab === "salas" ? " active room-tab" : ""}`} onClick={() => setConflictTab("salas")}>
                     <Building2 size={14} />
@@ -296,7 +292,6 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
                 </button>
             </div>
 
-            {/* Room Conflicts */}
             {conflictTab === "salas" && (
                 filteredRoom.length === 0
                     ? <div className="conflict-empty-state">
@@ -319,7 +314,6 @@ export default function ConflictsView({ roomConflicts, teacherConflicts, conflic
                     </div>
             )}
 
-            {/* Teacher Conflicts */}
             {conflictTab === "docentes" && (
                 filteredTeacher.length === 0
                     ? <div className="conflict-empty-state">

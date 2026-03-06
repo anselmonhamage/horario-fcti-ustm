@@ -16,7 +16,6 @@ export default function DocentesView({ teacherConflicts, onSelectTurma }) {
         <div>
             <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 16 }}>{docentes.length} docentes · clique numa turma para ver horário</div>
 
-            {/* Mobile card layout */}
             <div className="docentes-cards">
                 {docentes.map(dc => {
                     const dias = [...new Set(dc.aulas.map(a => a.dia))];
@@ -60,7 +59,6 @@ export default function DocentesView({ teacherConflicts, onSelectTurma }) {
                 })}
             </div>
 
-            {/* Desktop table layout */}
             <div className="docentes-table-wrapper">
                 <table className="data-table">
                     <thead>
